@@ -66,6 +66,6 @@ wp_nav_menu( array( 'theme_location' => 'footer-right-column' ) ); ?>
         <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/Vague.js"></script>
 
         <!-- Original Script -->
-        <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/ptn_pj.js"></script>
+        <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/bss.js"></script>
 </body>
 </html>

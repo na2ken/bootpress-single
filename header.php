@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/drawer.css">
 
     <!-- Original CSS -->
-    <link rel="stylesheet" href="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/ptn_pj.css">
+    <link rel="stylesheet" href="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/bss.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
