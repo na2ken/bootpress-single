@@ -1,0 +1,527 @@
+@charset 'UTF-8';
+/*
+Theme Name: ORIGINAL THEME
+Author: Natsumoto Kenji
+Description: This is original theme for WordPress.
+Version: 0.0.5
+*/
+/* 記事 */
+article
+{
+    overflow: hidden;
+
+    margin-bottom: 40px;
+}
+
+article h1
+{
+    font-size: 32px;
+    font-weight: normal;
+
+    margin: 0;
+}
+
+article h1 a
+{
+    text-decoration: none;
+
+    color: #000;
+}
+
+
+/* 記事の付加情報 */
+.postinfo
+{
+    font-size: 14px;
+
+    margin-top: 15px;
+}
+
+.postinfo a
+{
+    text-decoration: none;
+
+    color: #000;
+}
+
+.postinfo .postcat
+{
+    margin-left: 20px;
+}
+
+.postinfo .postcom
+{
+    margin-left: 20px;
+}
+
+.postinfo i
+{
+    color: #888;
+}
+
+
+/* 前後の記事へのリンク */
+.pagenav a
+{
+    font-size: 12px;
+
+    padding: 5px 10px;
+
+    text-decoration: none;
+
+    color: #666;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+}
+
+.pagenav .old a
+{
+    float: left;
+}
+
+.pagenav .new a
+{
+    float: right;
+}
+
+.pagenav
+{
+    clear: both;
+    overflow: hidden;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/* ヘッダー */
+
+.siteinfo
+{
+    overflow: hidden;
+
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    color: #4a5f7e;
+    background-color: #fff;
+}
+
+.siteinfo a
+{
+    color: #4a5f7e;
+}
+
+.siteinfo h1
+{
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+
+    float: left;
+
+    margin: 0;
+}
+
+.siteinfo p
+{
+    font-size: 12px;
+
+    float: right;
+
+    margin: 0;
+    margin-top: 5px;
+}
+
+
+/* 本文中の画像 */
+article img
+{
+    max-width: 100%;
+    height: auto;
+
+    border: none;
+}
+
+.aligncenter
+{
+    display: block;
+
+    margin-top: 30px;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
+}
+
+.alignright
+{
+    float: right;
+
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.alignleft
+{
+    float: left;
+
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.wp-caption
+{
+    max-width: 100%;
+}
+
+.wp-caption-text
+{
+    font-size: 14px;
+
+    margin: 0;
+
+    text-align: center;
+
+    color: #666;
+}
+
+
+/* メニュー */
+.blogmenu ul
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.blogmenu .widget
+{
+    margin-bottom: 30px;
+    padding: 20px;
+
+    background-color: #e8e8e8;
+}
+
+.blogmenu .widgettitle
+{
+    font-size: 14px;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    color: #4a5f7e;
+    border-right: solid 10px #4a5f7e;
+}
+
+.blogmenu li a
+{
+    font-size: 14px;
+
+    display: block;
+
+    padding: 10px 5px;
+
+    text-decoration: none;
+
+    color: #666;
+}
+
+.blogmenu li a:hover
+{
+    background-color: #fff;
+}
+
+
+/* 見出し */
+.archive-title
+{
+    font-size: 14px;
+    font-weight: normal;
+
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    background-color: #eee;
+}
+
+.archive-title i
+{
+    padding: 15px;
+
+    color: #fff;
+    background-color: #4a5f7e;
+}
+
+
+/* コメント投稿フォーム */
+#respond p
+{
+    font-size: 12px;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#respond label
+{
+    font-size: 14px;
+}
+
+#respond input,
+#respond textarea
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+}
+
+#respond input[type='submit']
+{
+    width: 200px;
+    padding: 10px;
+
+    cursor: pointer;
+
+    border: none;
+    background-color: #e6cc1c;
+
+    -webkit-appearance: none;
+}
+
+#respond input[type='submit']:hover
+{
+    background-color: #fa0;
+}
+
+#respond .required
+{
+    color: #f00;
+}
+
+
+/* コメント */
+#comments footer
+{
+    font-size: 12px;
+
+    margin: 0;
+
+    color: #000;
+    background: none;
+}
+
+#comments footer a
+{
+    color: #000;
+}
+
+#comments footer div
+{
+    display: inline;
+}
+
+#comments ul
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+#comments article
+{
+    margin-bottom: 10px;
+    padding: 10px 20px 20px 20px;
+
+    border: dotted 1px #aaa;
+}
+
+#comments .comment-content
+{
+    margin-left: 30px;
+}
+
+
+/* お問い合わせフォーム */
+.wpcf7 input,
+.wpcf7 textarea
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+}
+
+.wpcf7 input[type='submit']
+{
+    width: 200px;
+    padding: 10px;
+
+    cursor: pointer;
+
+    border: none;
+    background-color: #e6cc1c;
+
+    -webkit-appearance: none;
+}
+
+.wpcf7 input[type='submit']:hover
+{
+    background-color: #fa0;
+}
+
+
+
+/* メディアクエリの設定 */
+@media (min-width: 768px)
+{
+    /* ２段組 */
+
+    .contents
+    {
+        float: left;
+
+        width: 65%;
+    }
+
+    .blogmenu
+    {
+        float: right;
+
+        width: 30%;
+    }
+}
+
+
+
+/* 記事の概要 */
+.excerpt p
+{
+    font-size: 14px;
+}
+
+.excerpt .more a
+{
+    padding: 5px 20px;
+
+    text-decoration: none;
+
+    color: #000;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+}
+
+.excerpt .more a:hover
+{
+    background-color: #e6cc1c;
+}
+
+.excerpt .more i
+{
+    margin-left: 10px;
+
+    color: #ccc;
+}
+
+@media (min-width: 500px)
+{
+    .excerpt img
+    {
+        float: left;
+
+        width: 40%;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 499px)
+{
+    .excerpt img
+    {
+        display: block;
+
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+
+/* トップページ */
+.largeheader
+{
+    width: 100%;
+    height: auto;
+
+    vertical-align: bottom;
+}
+
+
+/* トップページのメニュー */
+.topmenu
+{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.link
+{
+    margin-bottom: 15px;
+
+    text-align: center;
+}
+
+.link a
+{
+    font-size: 20px;
+
+    text-decoration: none;
+
+    color: #aaa;
+}
+
+.link i
+{
+    font-size: 50px;
+    line-height: 150px;
+
+    display: block;
+
+    width: 150px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+
+    color: #fff;
+    border-radius: 75px;
+    background-color: #ecc952;
+}
+
+.link:nth-child(2) i
+{
+    background-color: #e8a380;
+}
+
+.link:nth-child(3) i
+{
+    background-color: #b7ef6b;
+}
+
+
+@media (min-width: 500px)
+{
+    .topmenu
+    {
+        overflow: hidden;
+    }
+
+    .link
+    {
+        float: left;
+
+        width: 33.3333%;
+    }
+}
