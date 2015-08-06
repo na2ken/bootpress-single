@@ -41,31 +41,31 @@ wp_nav_menu( array( 'theme_location' => 'footer-right-column' ) ); ?>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="https://cdn.jsdelivr.net/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
         <!-- bootstrap-autohidingnavbar -->
         <script src="http://www.google.com/jsapi/"></script>
-        <script src="<?php echo home_url(); ?>/wp-content/themes/original_theme-master/jquery.bootstrap-autohidingnavbar.min.js"></script>
+        <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/jquery.bootstrap-autohidingnavbar.min.js"></script>
 
         <!-- ClockPicker script -->
-        <script src="<?php echo home_url(); ?>/wp-content/themes/original_theme-master/bootstrap-clockpicker.js"></script>
+        <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/bootstrap-clockpicker.js"></script>
 
         <!-- Slick -->
-        <script src="<?php echo home_url(); ?>/wp-content/themes/original_theme-master/slick.js"></script>
+        <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/slick.js"></script>
 
         <!-- WOW -->
-        <script src="<?php echo home_url(); ?>/wp-content/themes/original_theme-master/moment.min.js"></script>
-        <script src="<?php echo home_url(); ?>/wp-content/themes/original_theme-master/daterangepicker.js"></script>
-        <script src="<?php echo home_url(); ?>/wp-content/themes/original_theme-master/wow.js"></script>
+        <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/moment.min.js"></script>
+        <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/daterangepicker.js"></script>
+        <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/wow.js"></script>
 
         <!-- Drawer & Vendor js -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
-        <script src="<?php echo home_url(); ?>/wp-content/themes/original_theme-master/jquery.drawer.js"></script>
+        <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/jquery.drawer.js"></script>
 
         <!-- Vague -->
-        <script src="<?php echo home_url(); ?>/wp-content/themes/original_theme-master/Vague.js"></script>
+        <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/Vague.js"></script>
 
         <!-- Original Script -->
-        <script src="<?php echo home_url(); ?>/wp-content/themes/original_theme-master/ptn_pj.js"></script>
+        <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/ptn_pj.js"></script>
 </body>
 </html>
