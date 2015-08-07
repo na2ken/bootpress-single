@@ -51,7 +51,7 @@
           <span class="icon-bar"></span>
           </button>
           <h1 class="navbar-header">
-              <a href="<?php echo home_url(); ?>" class="navbar-brand"><img src="<?php echo home_url(); ?>/wp-content/themes/original_theme-master/img/vi.png" height="auto" width="60" alt="pj-imgVi-gry"></a>
+              <a href="<?php echo home_url(); ?>" class="navbar-brand"><img src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/img/bss-vi.png" height="auto" width="192" height="auto" alt="<?php bloginfo( 'name' ); ?><?php wp_title(); ?>"></a>
           </h1><!-- /.navbar-header -->
           <nav class="navbar-collapse collapse" id="navigation" role="navigation">
 <?php wp_nav_menu( array( 'theme_location' => 'header-navi', 'items_wrap' => '<ul class="nav navbar-nav navbar-right">%3$s</ul>' ) ); ?>

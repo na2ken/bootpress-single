@@ -5,9 +5,11 @@ get_header(); ?>
 
         <div class="demo-keyVisual wow fadeIn" data-wow-duration="2.5s" data-wow-delay="0s">
                 <div class="demo-keyVisual__body">
-                    <p class="demo-keyVisual__bodyCopy wow fadeInDown liberation-b" data-wow-duration="3.5s" data-wow-delay="2.0s">WordPress X Bootstrap3<br>
-Combination Play Seminar.</p>
-                    <p class="demo-keyVisual__XX wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="3.0s"  style="font-size:20px;">Coming Soon !</p>
+                    <p class="demo-keyVisual__bodyCopy wow fadeInDown liberation-b txtColor-wht" data-wow-duration="3.5s" data-wow-delay="2.0s">
+
+<?php bloginfo( 'name' ); ?><?php wp_title(); ?>
+
+                    <p class="demo-keyVisual__XX wow fadeInDown txtColor-wht" data-wow-duration="2.5s" data-wow-delay="3.0s"  style="font-size:20px;">Coming Soon !</p>
                 </div><!-- /.demo-keyVisual__body -->
 
                <div class="demo-keyVisual__hero-btn text-center">

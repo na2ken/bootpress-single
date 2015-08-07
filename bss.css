@@ -1,3 +1,16 @@
+Skip to content
+This repository  
+Pull requests
+Issues
+Gist
+ @na2ken
+ Unwatch 1
+  Star 0
+ Fork 0na2ken/bootpress-single
+Branch: master  bootpress-single/bss.css
+@na2kenna2ken 18 hours ago ファイル名の変更
+1 contributor
+RawBlameHistory     5146 lines (4442 sloc)  145.123 kB
 @charset "utf-8";
 /*******************************************************************
  *     ___ ___ ___
@@ -4018,13 +4031,11 @@ body.page .demo-keyVisual {
         background-size: cover;
         background-position:; }
 
-body.page-template-top .demo-keyVisual,
-  .demo-keyVisual {
-    color: #f6f6f6;
+body#Page .demo-keyVisual {
     text-align: center;
     position: relative;
     min-height: 100%;
-    background: #b1b1b1 url('http://na2ken.com/assets/img/pj-img001.jpg'); /*  home bg img setting */
+    background: #b1b1b1 url('./img/bss-bg001.jpg'); /*  home bg img setting */
     background-size: cover;
     background-position: 50%; }
 
@@ -5112,7 +5123,8 @@ strong {
 
 @font-face {
   font-family:'Liberation Sans Regular';
-  src:url("../fonts/LiberationSans-Regular.eot") format("eot"),url("../fonts/LiberationSans-Regular.woff") format("woff"),url("../fonts/LiberationSans-Regular.ttf") format("truetype"),url("../fonts/LiberationSans-Regular.svg#LiberationSans-Regular")
+  src:url("../../../assets/fonts/LiberationSans-Regular.eot") format("eot"),url("../../../assets/fonts/LiberationSans-Regular.woff") format("woff"),url("../../../assets/fonts/LiberationSans-Regular.ttf") format("truetype"),
+url("../../../assets/fonts/LiberationSans-Regular.svg")
   format("svg");
   font-weight:normal;
   font-style:normal;
@@ -5120,7 +5132,7 @@ strong {
 
   @font-face {
     font-family:'Liberation Sans Bold';
-    src:url("../fonts/LiberationSans-Bold.ttf") format("truetype");
+    src:url("../../../assets/fonts/LiberationSans-Bold.ttf") format("truetype");
     font-weight:500;
     line-height: 1.5;
     font-style:bold;
@@ -5136,7 +5148,7 @@ strong {
 
 @font-face {
       font-family: 'NotoSansCJKjp-Thin';
-      src: url('../fonts/NotoSansCJKjp-Thin-Subset.woff'),url('../fonts/NotoSansCJKjp-Thin-Subset.eot');
+      src: url('../../../assets/fonts/NotoSansCJKjp-Thin-Subset.woff'),url('../../../assets/fonts/NotoSansCJKjp-Thin-Subset.eot');
   }
 
 .notoSansJP {
