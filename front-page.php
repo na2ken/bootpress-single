@@ -1,6 +1,5 @@
 <?php
-/* Template Name: Top */
-
+/* Template Name: front-page */
 get_header(); ?>
 
         <div class="demo-keyVisual wow fadeIn" data-wow-duration="2.5s" data-wow-delay="0s">
@@ -9,7 +8,7 @@ get_header(); ?>
 
 <?php bloginfo( 'name' ); ?><?php wp_title(); ?>
 
-                    <p class="demo-keyVisual__XX wow fadeInDown txtColor-wht" data-wow-duration="2.5s" data-wow-delay="3.0s"  style="font-size:20px;">Coming Soon !</p>
+                    <p class="demo-keyVisual__XX wow fadeInDown txtColor-wht" data-wow-duration="2.5s" data-wow-delay="3.0s" style="font-size:20px;">Coming Soon !</p>
                 </div><!-- /.demo-keyVisual__body -->
 
                <div class="demo-keyVisual__hero-btn text-center">

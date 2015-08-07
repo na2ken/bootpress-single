@@ -13,14 +13,12 @@ wp_nav_menu( array( 'theme_location' => 'footer-left-column' ) ); ?>
 <?php
 // footer nav Center
 wp_nav_menu( array( 'theme_location' => 'footer-center-column' ) ); ?>
-				</div>
                          </div>
                          <div class="col-md-4 lay-footerCol">
                          <h3 clas="">footer menu</h3>
 <?php
 // footer nav Right
 wp_nav_menu( array( 'theme_location' => 'footer-right-column' ) ); ?>
-
                          </div>
                     </div><!-- /.row -->
               </div><!-- /.container -->
