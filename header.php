@@ -42,7 +42,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> id="<?php echo attribute_escape( $post->post_name ); ?>Page">
-  <header id="header" class="demo-header navbar navbar-default navbar-fixed-top" role="banner">
+  <header id="pageTop" class="l-header navbar navbar-default navbar-fixed-top" role="banner">
       <div class="container">
           <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
           <span class="sr-only">Toggle navigation</span>
@@ -50,9 +50,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
-          <h1 class="navbar-header">
-              <a href="<?php echo home_url(); ?>" class="navbar-brand"><img src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/img/bss-vi.png" height="auto" width="192" height="auto" alt="<?php bloginfo( 'name' ); ?><?php wp_title(); ?>"></a>
-          </h1><!-- /.navbar-header -->
+          <div class="navbar-header">
+              <a href="<?php echo home_url(); ?>" class="navbar-brand"><img src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/img/bss-vi.png" height="auto" width="192" height="auto" alt="<?php wp_title(); ?>"></a>
+          </div><!-- /.navbar-header -->
           <nav class="navbar-collapse collapse" id="navigation" role="navigation"><?php wp_nav_menu( array( 'theme_location' => 'header-navi', 'items_wrap' => '<ul class="nav navbar-nav navbar-right">%3$s</ul>' ) ); ?></nav><!-- /.navbar-collapse -->
       </div><!-- /.container -->
   </header><!-- /.navbar -->

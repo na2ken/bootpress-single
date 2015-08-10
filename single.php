@@ -11,7 +11,7 @@ get_header(); ?>
 
         <div class="demo-keyVisual">
                 <div class="demo-keyVisual__body">
-                    <p class="demo-keyVisual__bodyCopy wow fadeInDown">The Other Page.</p>
+                    <p class="demo-keyVisual__bodyCopy wow fadeInDown">The single Page.</p>
                     <p class="demo-keyVisual__XX wow fadeIn" style="font-size:20px;">CREATIVITY AND CHALLENGE WILL ALWAYS KEEP ME HAPPY.</p>
                 </div><!-- /.demo-keyVisual__body -->
         </div><!-- /.demo-keyVisual -->
