@@ -24,7 +24,19 @@ get_header(); ?>
                 　　　　<div class="container">
 	                      　　　　<div class="row">
 　　　　　　　　　　　　　　　　　　　　　　　<div class="col-sm-12 l-marginTop-xs l-marginBottom-xs">
-
+  <nav class="nav">
+    <ul class="pagination">
+      <li><a href="<?php echo esc_url( home_url( '/main-service/' ) );?>">ALL</a></li>
+      <?php
+        // メニューカテゴリーのリストを出力
+        $args = array(
+          'taxonomy' => 'main-servicecat', //menucatタクソノミーを指定
+          'title_li' => '', //リストの見出しは出力しない
+        );
+        wp_list_categories( $args );
+      ?>
+    </ul>
+  </nav><!--/.nav-->
 
 <?php if ( have_posts() ) : ?>
 <?php while ( have_posts() ) :

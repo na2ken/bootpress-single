@@ -6,11 +6,11 @@
  *   \___|___/___/
  *
  *   WordPress Original Theme
- *   BootPress "single" v0.1.3b
+ *   BootPress "single" v0.10.5b
  *
  *   Code licensed MIT.
  *   For details, see http://en.wikipedia.org/wiki/MIT_License
- *   Date:150809
+ *   Date:150810
  *   2015 Some Rights Reserved , Kenji Natsumoto
  *   Thanks for Nicolas Gallagher & Jonathan Neal(Normalize.css)
  *   Thanks for Jonathan Snook(SMACSS)
@@ -47,9 +47,9 @@
 
      Font-size Adjustment
 
-     77% = 10px	|	112% = 16px	|	167% = 22px
-     85% = 11px	|	129% = 17px	|	174% = 23px
-     92% = 12px	|	136% = 18px	|	182% = 24px
+     77% =  10px	|	112% = 16px	|	167% = 22px
+     85% =  11px	|	129% = 17px	|	174% = 23px
+     92% =  12px	|	136% = 18px	|	182% = 24px
      100% = 13px	|	144% = 19px	|	189% = 25px
      107% = 14px	|	152% = 20px	|	197% = 26px
      114% = 15px	|	159% = 21px	|
@@ -72,7 +72,7 @@ html {
 
 body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 114%;
+  font-size: 129%;
   line-height: 2;
   margin: 0;
   overflow-x: hidden;
@@ -89,6 +89,9 @@ body, html {
 
 hr {
   display: none; }
+
+p {
+  font-size: 129%; }
 
 a {
   color: #03A9F4;

@@ -71,7 +71,7 @@ function custom_register_post_type() {
 		'public' => true, // 公開する
 		'has_archive' => true, // アーカイブページをもたせる
 		'supports' => array(
-			'title', 'editor', 'thumbnail', // 投稿作成時に表示するフィールド
+			'title', 'editor', 'thumbnail', 'custom-fields' // 投稿作成時に表示するフィールド
 		),
 		'rewrite' => array(
 			'with_front' => false, // http://localhost/wordpress/menus/ というパーマリンクに
@@ -81,3 +81,23 @@ function custom_register_post_type() {
 	register_post_type( 'main-service', $args );
 }
 add_action( 'init', 'custom_register_post_type' );
+
+/****************************************
+
+	カスタムタクソノミー
+	カスタム投稿にカテゴリー、タグなどの分類・階層構造を追加
+
+*****************************************/
+
+function custom_register_taxonomy() {
+	$args = array(
+		'hierarchical' => true, // 階層を利用する
+		'label' => 'サービスカテゴリー', // ラベルを指定
+		'rewrite' => array(
+			'with_front' => false, // パーマリンクの形式を指定
+		),
+	);
+	// main-service 投稿タイプに main-servicecat というスラッグ名でタクソノミー(カテゴリー)を登録
+	register_taxonomy( 'main-servicecat', 'main-service', $args );
+}
+add_action( 'init', 'custom_register_taxonomy' );
