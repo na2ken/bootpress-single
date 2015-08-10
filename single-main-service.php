@@ -10,9 +10,12 @@ get_header(); ?>
             <h1 class="l-keyVisual-bodyCopy wow fadeInDown liberation-b txtColor-wht" data-wow-duration="3.5s" data-wow-delay="2.0s">
 <?php the_title(); ?></h1>
 
-
+<?php if ( get_post_meta( $post->ID, 'subheading', true)
+): ?>
             <h2 class="l-keyVisual-bodySubCopy wow fadeInDown txtColor-wht" data-wow-duration="2.5s" data-wow-delay="3.0s" style="font-size:20px;">
-サブタイトル：サービスの説明アジェンダ。</h2>
+<?php echo esc_html ( get_post_meta( $post->ID, 'subheading', true )
+); ?></h2>
+<?php endif; ?>
         </div><!-- /.l-keyVisual-body -->
 
 </div><!-- /.l-keyVisual -->
@@ -39,7 +42,11 @@ get_header(); ?>
 <?php endwhile; ?>
 <?php endif; ?>
 </div>
+
 　　　　　　　　　　　　　　　　　　　　　　　</div><!-- /.col-md-12 -->
+<p class="text-left">
+  <a href="<?php echo esc_url( home_url( '/main-service/' ) ); ?>">＜＜ サービス一覧へ戻る</a>
+</p>
                                 </div><!-- /.row -->
                         </div><!-- /.container -->
                 </section><!-- /section01 -->

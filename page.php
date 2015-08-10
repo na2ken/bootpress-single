@@ -8,8 +8,6 @@ get_header(); ?>
             <h1 class="l-keyVisual-bodyCopy wow fadeInDown liberation-b txtColor-wht" data-wow-duration="3.5s" data-wow-delay="2.0s">
 <?php the_title(); ?></h1>
 
-
-            <h2 class="l-keyVisual-bodySubCopy wow fadeInDown txtColor-wht" data-wow-duration="2.5s" data-wow-delay="3.0s" style="font-size:20px;">Coming Soon !</h2>
         </div><!-- /.l-keyVisual-body -->
 
 </div><!-- /.l-keyVisual -->
