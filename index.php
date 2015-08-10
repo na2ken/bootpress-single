@@ -1,7 +1,7 @@
 <?php get_header(); ?>
         <div class="demo-keyVisual">
                 <div class="demo-keyVisual__body">
-                    <p class="demo-keyVisual__bodyCopy wow fadeInDown">The Other Page.</p>
+                    <p class="demo-keyVisual__bodyCopy wow fadeInDown">The Index Page.</p>
                     <p class="demo-keyVisual__XX wow fadeIn" style="font-size:20px;">CREATIVITY AND CHALLENGE WILL ALWAYS KEEP ME HAPPY.</p>
                 </div><!-- /.demo-keyVisual__body -->
         </div><!-- /.demo-keyVisual -->
@@ -17,20 +17,20 @@
 
 <?php if( is_category() ): ?>
 <h1 class="archive-title">
-<i class="fa fa-folder-open"></i> 
+<i class="fa fa-folder-open"></i>
 「<?php single_cat_title(); ?>」に関する記事
 </h1>
 <?php endif; ?>
 
 <?php if(is_month()): ?>
 <h1 class="archive-title">
-<i class="fa fa-clock-o"></i> 
+<i class="fa fa-clock-o"></i>
 <?php echo get_the_date( 'Y年n月' ); ?>に投稿した記事
 </h1>
 <?php endif; ?>
 
 
-<?php if(have_posts()): while(have_posts()): 
+<?php if(have_posts()): while(have_posts()):
 the_post(); ?>
 
 <article <?php post_class(); ?>>
@@ -56,8 +56,8 @@ the_post(); ?>
 	<i class="fa fa-comment"></i>
 	<a href="<?php comments_link(); ?>">
 	<?php comments_number(
-		'コメント', 
-		'コメント（1件）', 
+		'コメント',
+		'コメント（1件）',
 		'コメント（%件）'
 	); ?>
 	</a>
@@ -75,7 +75,7 @@ the_post(); ?>
 	<?php if( has_post_thumbnail() ): ?>
 	<p><?php the_post_thumbnail( 'medium' ); ?></p>
 	<?php endif; ?>
-	
+
 	<?php the_excerpt(); ?>
 	<p class="more"><a href="<?php the_permalink(); ?>">続きを読む <i class="fa fa-chevron-right"></i></a></p>
 	</div>
@@ -86,16 +86,16 @@ the_post(); ?>
 <?php if( is_single() ): ?>
 <div class="pagenav">
 	<span class="old">
-	<?php previous_post_link( 
-	'%link', 
-	'<i class="fa fa-chevron-circle-left"></i> %title' 
+	<?php previous_post_link(
+	'%link',
+	'<i class="fa fa-chevron-circle-left"></i> %title'
 	); ?>
 	</span>
 
 	<span class="new">
-	<?php next_post_link( 
-	'%link', 
-	'%title <i class="fa fa-chevron-circle-right"></i>' 
+	<?php next_post_link(
+	'%link',
+	'%title <i class="fa fa-chevron-circle-right"></i>'
 	); ?>
 	</span>
 </div>

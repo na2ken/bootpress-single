@@ -38,7 +38,6 @@ add_filter('excerpt_more', 'my_more');
 //アイキャッチ画像
 add_theme_support( 'post-thumbnails' );
 
-
 /****************************************
 
 	カスタムメニュー
@@ -59,4 +58,26 @@ register_nav_menu( 'footer-left-column', 'フッター左カラム' );
 register_nav_menu( 'footer-center-column', 'フッターセンターカラム' );
 register_nav_menu( 'footer-right-column', 'フッター右カラム' );
 
+/****************************************
 
+	カスタム投稿タイプ
+
+*****************************************/
+
+function custom_register_post_type() {
+	$args = array(
+		'label' => 'サービス',
+		'hierarchical' => false, //投稿と同じように
+		'public' => true, // 公開する
+		'has_archive' => true, // アーカイブページをもたせる
+		'supports' => array(
+			'title', 'editor', 'thumbnail', // 投稿作成時に表示するフィールド
+		),
+		'rewrite' => array(
+			'with_front' => false, // http://localhost/wordpress/menus/ というパーマリンクに
+		),
+	);
+	// main-service というスラッグ名でカスタム投稿タイプを登録
+	register_post_type( 'main-service', $args );
+}
+add_action( 'init', 'custom_register_post_type' );

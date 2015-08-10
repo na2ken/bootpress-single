@@ -1,32 +1,30 @@
-<footer class="footer lay-footer space-footerAbove bgcolor-footerAbove">
-       <div class="lay-footerAbove space-footerAbove bgcolor-footerAbove">
+<footer class="footer l-footer l-footer-bg l-marginTop-0">
+       <div class="l-footerAbove l-footerAbobe-bg">
              <div class="container">
                    <div class="row">
-                         <div class="col-md-4 lay-footerCol">
+                         <div class="col-md-4 l-footerCol">
                          <h3 clas="">Category</h3>
 <?php
 // footer nav Left
 wp_nav_menu( array( 'theme_location' => 'footer-left-column' ) ); ?>
                          </div>
-                         <div class="col-md-4 lay-footerCol">
+                         <div class="col-md-4 l-footerCol">
                          <h3 clas="">SNS link.</h3>
 <?php
 // footer nav Center
 wp_nav_menu( array( 'theme_location' => 'footer-center-column' ) ); ?>
-				</div>
                          </div>
-                         <div class="col-md-4 lay-footerCol">
+                         <div class="col-md-4 l-footerCol">
                          <h3 clas="">footer menu</h3>
 <?php
 // footer nav Right
 wp_nav_menu( array( 'theme_location' => 'footer-right-column' ) ); ?>
-
                          </div>
                     </div><!-- /.row -->
               </div><!-- /.container -->
-        </div><!-- /.lay-footerAbove -->
+        </div><!-- /.l-footerAbove -->
 
-        <div class="lay-footeBelow space-footerBelow bgcolor-footerAbove">
+        <div class="l-footeBelow l-footerBelow-bg l-marginBottom-0">
               <div class="container">
                       <div class="row">
                         <small>Copyright &copy; <?php bloginfo( 'name' ); ?></small>
