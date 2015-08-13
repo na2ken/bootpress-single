@@ -26,7 +26,7 @@ get_header(); ?>
                 　　　　<div class="container">
 	                      　　　　<div class="row">
 　　　　　　　　　　　　　　　　　　　　　　　<div class="col-sm-12 l-marginTop-xs l-marginBottom-xs">
-<div class="col-sm-6">
+<div class="col-md-12">
   <?php if ( has_post_thumbnail() ) : ?>
     <?php the_post_thumbnail( 'medium' ); ?>
   <?php else : //アイキャッチ画像がないとき ?>
@@ -35,7 +35,7 @@ get_header(); ?>
 </p>
   <?php endif; ?>
 </div>
-<div class="col-sm-6">
+<div class="col-md-12">
 <P>
   <?php the_content(); ?>
 </p>
@@ -45,7 +45,7 @@ get_header(); ?>
 
 　　　　　　　　　　　　　　　　　　　　　　　</div><!-- /.col-md-12 -->
 <p class="text-left">
-  <a href="<?php echo esc_url( home_url( '/main-service/' ) ); ?>">＜＜ サービス一覧へ戻る</a>
+  <a href="<?php echo esc_url( home_url( '/main-service/' ) ); ?>">＜＜ 教材一覧へ戻る</a>
 </p>
                                 </div><!-- /.row -->
                         </div><!-- /.container -->

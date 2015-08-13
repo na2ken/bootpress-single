@@ -66,7 +66,7 @@ register_nav_menu( 'footer-right-column', 'フッター右カラム' );
 
 function custom_register_post_type() {
 	$args = array(
-		'label' => 'サービス',
+		'label' => 'オンライン教材',
 		'hierarchical' => false, //投稿と同じように
 		'public' => true, // 公開する
 		'has_archive' => true, // アーカイブページをもたせる
@@ -92,7 +92,7 @@ add_action( 'init', 'custom_register_post_type' );
 function custom_register_taxonomy() {
 	$args = array(
 		'hierarchical' => true, // 階層を利用する
-		'label' => 'サービスカテゴリー', // ラベルを指定
+		'label' => 'テーマ', // ラベルを指定
 		'rewrite' => array(
 			'with_front' => false, // パーマリンクの形式を指定
 		),
@@ -101,3 +101,31 @@ function custom_register_taxonomy() {
 	register_taxonomy( 'main-servicecat', 'main-service', $args );
 }
 add_action( 'init', 'custom_register_taxonomy' );
+
+
+/****************************************
+
+	カスタム投稿タイプにMarkdown（JetPack）を適用させる
+
+*****************************************/
+
+/**
+ * Jetpack markdown for custom post type
+ * via. http://kopepasah.com/tutorial/add-jetpack-markdown-support-to-custom-post-types/
+ */
+add_action( 'init', 'amimoto_custom_jetpack_markdown_support' );
+function amimoto_custom_jetpack_markdown_support() {
+
+	$args = array(
+		'public'   => true,
+		'_builtin' => false
+	);
+	$output = 'names'; // names or objects, note names is the default
+	$operator = 'and'; // 'and' or 'or'
+
+	$post_types = get_post_types( $args, $output, $operator );
+
+	foreach ( $post_types  as $post_type ) {
+		add_post_type_support( $post_type, 'wpcom-markdown' );
+	}
+}
