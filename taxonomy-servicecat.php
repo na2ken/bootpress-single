@@ -1,5 +1,5 @@
 <?php
-/* Template Name: archive-ain-service */
+/* Template Name: taxonomy-servicecat */
 get_header(); ?>
 
 <div class="l-keyVisual wow fadeIn" data-wow-duration="2.5s" data-wow-delay="0s">
@@ -17,7 +17,7 @@ get_header(); ?>
 
 
 
-<!-- archive-ain-service2  temp. -->
+<!-- taxonomy-servicecat temp. -->
 <article <?php post_class(); ?>>
                 <section class="demo-frame1 bgColor" id="section01">
                 　　　　<div class="container">

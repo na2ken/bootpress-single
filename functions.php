@@ -1,7 +1,7 @@
 <?php
 /****************************************
-*   BootPress "single" v0.11.5b
-*   Date:150816
+*   BootPress "single" v1.01
+*   Date:151005 21:13
 *****************************************/
 //ウィジェット
 register_sidebar();
@@ -63,27 +63,39 @@ register_nav_menu( 'footer-right-column', 'フッター右カラム' );
 
 /****************************************
 
-	カスタム投稿タイプ
+	カスタム投稿タイプを複数名で登録する
 
 *****************************************/
 
-function custom_register_post_type() {
-	$args = array(
-		'label' => 'オンライン教材',
-		'hierarchical' => false, //投稿と同じように
-		'public' => true, // 公開する
-		'has_archive' => true, // アーカイブページをもたせる
-		'supports' => array(
-			'title', 'editor', 'thumbnail', 'custom-fields' // 投稿作成時に表示するフィールド
-		),
-		'rewrite' => array(
-			'with_front' => false, // http://localhost/wordpress/menus/ というパーマリンクに
-		),
-	);
-	// main-service というスラッグ名でカスタム投稿タイプを登録
-	register_post_type( 'main-service', $args );
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+// main-service というスラッグ名でカスタム投稿タイプを登録
+    register_post_type( 'main-service',
+        array(
+        'labels' => array(
+        'name' => __( 'サービス' ),
+        'singular_name' => __( 'サービス' )
+        ),
+        'public' => true, // 公開する
+        'has_archive' => true, // アーカイブページをもたせる
+        'menu_position' => 5,
+        )
+    );
+
+    register_post_type( 'information',
+// information というスラッグ名でカスタム投稿タイプを登録
+        array(
+        'labels' => array(
+        'name' => __( 'お知らせ' ),
+        'singular_name' => __( 'お知らせ' )
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'menu_position' => 5,
+        )
+    );
 }
-add_action( 'init', 'custom_register_post_type' );
+
 
 /****************************************
 
@@ -91,7 +103,7 @@ add_action( 'init', 'custom_register_post_type' );
 	カスタム投稿にカテゴリー、タグなどの分類・階層構造を追加
 
 *****************************************/
-
+/* カスタムタクソノミー1 */
 function custom_register_taxonomy() {
 	$args = array(
 		'hierarchical' => true, // 階層を利用する
@@ -104,6 +116,34 @@ function custom_register_taxonomy() {
 	register_taxonomy( 'main-servicecat', 'main-service', $args );
 }
 add_action( 'init', 'custom_register_taxonomy' );
+
+/* カスタムタクソノミー2 */
+register_taxonomy(
+  'information-detail',  // タクソノミーのslug
+  'information',           // 属する投稿タイプ
+  array(
+    'hierarchical' => true,  // 階層を利用する
+    'update_count_callback' => '_update_post_term_count',
+    'label' => 'サービス情報', // 日本語名
+    'singular_label' => 'サービスに関するお知らせ', // このタクソノミーの特徴
+    'public' => true,
+    'show_ui' => true
+  )
+);
+/* カスタムタクソノミー3 */
+register_taxonomy(
+  'information-summary',  // タクソノミーのslug
+  'information',           // 属する投稿タイプ
+  array(
+    'hierarchical' => true,  // 階層を利用する
+    'update_count_callback' => '_update_post_term_count',
+    'label' => '企業情報', // 日本語名
+    'singular_label' => '会社に関するお知らせ', // このタクソノミーの特徴
+    'public' => true,
+    'show_ui' => true
+  )
+);
+
 
 
 /****************************************
