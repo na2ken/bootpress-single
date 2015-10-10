@@ -1,45 +1,36 @@
 <?php
-/****************************************
-
-	404.php
-
-	404 Not Found 表示用の
-	テンプレートファイル
-
-*****************************************/
-
+/* Template Name: 404 */
 get_header(); ?>
 
-        <div class="demo-keyVisual">
-                <div class="demo-keyVisual__body">
-                    <p class="demo-keyVisual__bodyCopy wow fadeInDown">すいませんが、お探しのページは存在しません。</p>
-                    <p class="demo-keyVisual__XX wow fadeIn" style="font-size:20px;">もう一度確認くださるか、下記のリンクからアクセスをし直してください。</p>
-                </div><!-- /.demo-keyVisual__body -->
+<div class="l-keyVisual wow fadeIn" data-wow-duration="2.5s" data-wow-delay="0s">
+        <div class="l-keyVisual-body">
 
-               <div class="demo-keyVisual__hero-btn text-center">
-                   <a class="demo-btn-icon-round btn-icon-round--md is-white hidden-xs" href="#section01"><i class="fa fa-angle-double-down"></i></a>
-               </div><!-- /.demo-keyVisual__hero-btn -->
-        </div><!-- /.demo-keyVisual -->
+            <h1 class="l-keyVisual-bodyCopy wow fadeInDown liberation-b txtColor-wht" data-wow-duration="3.5s" data-wow-delay="2.0s">
+Hmmm... the page you're looking for isn't here.</h1>
 
-<article>
-                <section class="demo-frame1 bgColor" id="section01">
-                       <div class="container">
-                               <div class="row">
-                                       <div class="col-md-12">
-<!-- 404.php -->
-<div class="grid_9 push_3" id="main">
-	<div class="box-top"></div>
-	<div class="box-middle single-post post clearfix">
-		<?php get_template_part( 'content', 'none' ); ?>
-	</div>
-	<div class="box-bottom"></div>
-</div><!-- /#main -->
-<!-- / 404.php -->
+        </div><!-- /.l-keyVisual-body -->
 
-<?php get_sidebar(); ?>
-                                       </div><!--  /.col-md-12-- >
-                               </div><!-- /.row -->
-                       </div><!-- /.container -->
+</div><!-- /.l-keyVisual -->
+
+
+<!-- 404 temp. -->
+<article <?php post_class(); ?>>
+                <section class="" id="section01">
+                        <div class="container">
+	                        <div class="row">
+                                        <div class="col-md-12 l-marginTop-sm l-marginBottom-sm">
+                                        <p>お探しのページは、ネットワークやシステムの関係で一時的にアクセスできない状況にあるか、
+                                          内容の移動もしくは情報の期限切れのため削除させていただいた可能性があります。恐れ要りますが、トップページか上下のメニューから適切を思われるページをクリックください。
+                                        </p>
+<div class="l-center l-center-ex1 l-marginTop-sm">
+<p>
+<a class="btn btn-default" href="<?php echo home_url(); ?>">トップページへ戻る</a>
+</p>
+</div>
+
+                                        </div>
+                                </div>
+                        </div>
                 </section><!-- /section01 -->
 </article>
 <?php get_footer(); ?>

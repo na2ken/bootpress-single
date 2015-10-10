@@ -2,32 +2,31 @@
 /* Template Name: page */
 get_header(); ?>
 
-<div class="l-keyVisual wow fadeIn" data-wow-duration="2.5s" data-wow-delay="0s">
-        <div class="l-keyVisual-body">
+<div class="l-coverUnit">
+  <div class="l-coverUnit-body">
+      <h1 class="m-coverUnit-headline txtColor-wht wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="1.5s" >
+          <?php the_title(); ?>
+      </h1>
+  </div><!-- /.l-coverUnit-body -->
+</div><!-- /.coverUnit -->
 
-            <h1 class="l-keyVisual-bodyCopy wow fadeInDown liberation-b txtColor-wht" data-wow-duration="3.5s" data-wow-delay="2.0s">
-<?php the_title(); ?></h1>
+<!-- page temp. -->
+<!-- start The Content -->
+    <article>
 
-        </div><!-- /.l-keyVisual-body -->
-
-</div><!-- /.l-keyVisual -->
-
-
-<!-- page.php 固定ページtemp -->
-<article <?php post_class(); ?>>
-                <section class="" id="section01">
-                        <div class="container">
-	                        <div class="row">
-                                        <div class="col-md-12 l-marginTop-md l-marginBottom-md">
-                                          <?php if(have_posts()): while(have_posts()):
-                                          the_post(); ?>
+        <section id="service-info" class="l-paddingTop-sm l-paddingBottom-sm clearfix">
+            <div class="container2">
+                <div class="row2 no-gutter">
+                    <div class="container">
+<?php if(have_posts()): while(have_posts()): the_post(); ?>
 <?php the_content(); ?>
 
 <?php endwhile; endif; ?>
+                    </div><!-- /.container -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.section -->
 
-                                        </div>
-                                </div>
-                        </div>
-                </section><!-- /section01 -->
-</article>
+    </article>
+<!-- end The Content -->
 <?php get_footer(); ?>

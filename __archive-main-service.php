@@ -17,7 +17,7 @@ get_header(); ?>
 
 
 
-<!-- archive-ain-service2  temp. -->
+<!-- archive-ain-service2 midium thumbnailが横に並ぶtemp. -->
 <article <?php post_class(); ?>>
                 <section class="demo-frame1 bgColor" id="section01">
                 　　　　<div class="container">
