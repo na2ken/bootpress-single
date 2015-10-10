@@ -556,21 +556,21 @@ margin-top: 4px; }
 /* -- l-keyVisual img -- */
 
 body.error404 .l-keyVisual {
-  background: #b1b1b1 url('./img/bss-bg004.jpg') 0 0 no-repeat;
+  background: #b1b1b1 url('./img/bps-bg004.jpg') 0 0 no-repeat;
   height: 0;
   padding-top: 56.25%;
   background-size: contain; }
 
 body.archive .l-keyVisual {
   min-height: 25%;
-  background: #b1b1b1 url('./img/bss-bg003.jpg'); /* custom toukou page bg setting */
+  background: #b1b1b1 url('./img/bps-bg003.jpg'); /* custom toukou page bg setting */
   background-size: cover;
   background-position:; center 50%; }
 
 body#contactPage .l-keyVisual,
 body#companyPage .l-keyVisual {
   min-height: 25%;
-  background: #b1b1b1 url('./img/bss-bg002.jpg'); /* Kotei page bg setting */
+  background: #b1b1b1 url('./img/bps-bg002.jpg'); /* Kotei page bg setting */
   background-size: cover;
   background-position:; center 50%; }
 
@@ -578,14 +578,14 @@ body#Page .l-keyVisual {
   text-align: center;
   position: relative;
   min-height: 100%;
-  background: #b1b1b1 url('./img/bss-bg001.jpg'); /*  home bg img setting */
+  background: #b1b1b1 url('./img/bps-bg001.jpg'); /*  home bg img setting */
   background-size: cover;
   background-position: 50%; }
 
 body.single .l-keyVisual,
 body.blog .l-keyVisual {
     min-height: 25%;
-    background: #b1b1b1 url('./img/bss-bg003.jpg'); /*  blog top & blog detail page bg setting */
+    background: #b1b1b1 url('./img/bps-bg003.jpg'); /*  blog top & blog detail page bg setting */
     background-size: cover;
     background-position: center 50%; }
 

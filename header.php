@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/drawer.css">
 
     <!-- Original CSS -->
-    <link rel="stylesheet" href="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/bss.css">
+    <link rel="stylesheet" href="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/bps.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,7 +51,7 @@
           <span class="icon-bar"></span>
           </button>
           <div class="navbar-header">
-              <a href="<?php echo home_url(); ?>" class="navbar-brand"><img src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/img/bss-vi.png" height="auto" width="192" height="auto" alt="<?php wp_title(); ?>"></a>
+              <a href="<?php echo home_url(); ?>" class="navbar-brand"><img src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/img/bps-vi.png" height="auto" width="192" height="auto" alt="<?php wp_title(); ?>"></a>
           </div><!-- /.navbar-header -->
           <nav class="navbar-collapse collapse" id="navigation" role="navigation"><?php wp_nav_menu( array( 'theme_location' => 'header-navi', 'items_wrap' => '<ul class="nav navbar-nav navbar-right">%3$s</ul>' ) ); ?></nav><!-- /.navbar-collapse -->
       </div><!-- /.container -->
