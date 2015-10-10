@@ -61,11 +61,12 @@ google.setOnLoadCallback(initialize);
    * ================================================== */
 
   // Auto-Hiding
+  // 戻すときは　  $('.navbar-fixed-top').autoHidingNavbar();
   $('.navbar-fixed-top').autoHidingNavbar('disableAutohide',false);
   $(window).scroll(function () {
     var header = $('#header');
     var scroll = $(document).scrollTop();
-    if(scroll >= 1){
+    if(scroll >= 1){    // 戻すときは　 100
       header.addClass('is-black');
     } else {
       header.removeClass('is-black');
