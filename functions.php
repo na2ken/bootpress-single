@@ -78,6 +78,9 @@ function create_post_type() {
         ),
         'public' => true, // 公開する
         'has_archive' => true, // アーカイブページをもたせる
+				'supports' => array(
+					'title', 'editor', 'thumbnail', 'custom-fields' // 投稿作成時に表示するフィールド
+				),
         'menu_position' => 5,
         )
     );
@@ -91,6 +94,9 @@ function create_post_type() {
         ),
         'public' => true,
         'has_archive' => true,
+				'supports' => array(
+					'title', 'editor', 'thumbnail', 'custom-fields' // 投稿作成時に表示するフィールド
+				),
         'menu_position' => 5,
         )
     );

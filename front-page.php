@@ -8,11 +8,11 @@ get_header(); ?>
       <p class="m-coverUnit-shoulder text-center　txtColor-wht wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="1.5s" style="color: #f6f6f6;">
         <?php bloginfo('name'); ?>
       </p>
-      <h1 class="m-coverUnit-copy liberation txtColor-wht wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="2.0s" >WordPress X Bootstrap</h1>
-      <h2 class="m-coverUnit-subCopy txtColor-wht wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="2.5s" >たった６時間でマスターするダブルスキル術！</h2>
+      <h1 class="m-coverUnit-copy txtColor-wht wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="2.0s" >WordPress X Bootstrap</h1>
+      <h2 class="m-coverUnit-subCopy txtColor-wht wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="2.5s" >1分で作る応用自在のプロトタイプ！</h2>
       <div class="row">
           <div class="m-coverUnit-heroBtn col-sm-offset-4 col-sm-4 col-xs-offset-2 col-xs-8">
-             <a class="btn btn-lg btn-block m-btn-yellow wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="2.5s" href="#" role="button">今すぐ見る</a>
+             <a class="btn btn-lg btn-block m-btn-yellow wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="2.5s" href="#" role="button">ダウンロードする</a>
           </div>
       </div><!-- /.row -->
   </div><!-- /.l-coverUnit-body -->
