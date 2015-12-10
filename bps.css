@@ -6,8 +6,8 @@
 *   \___|___/___/
 *
 *   WordPress Original Theme
-*   BootPress "single" v1.01.2a
-*   Date:151004
+*   BootPress "single" v0.91.1a
+*   Date:151010
 *
 *   Code licensed MIT.
 *   For details, see http://en.wikipedia.org/wiki/MIT_License
@@ -224,13 +224,12 @@ body.home .l-coverUnit-body {
     margin: auto;
     background: #543-;
     height: 340px;
-    top: 150px; }
+    top: 100px; }
 
 .m-coverUnit-copy {
     background:  #000-;
     margin-top: 0;
-    padding: 0;
-    line-height: 1; }
+    padding: 0; }
 
 .m-coverUnit-subCopy {
     background:  #888-;
@@ -618,10 +617,11 @@ a.m-btn-pink:active {
 
 .m-coverUnit-copy {
   font-size: 280%;
-  line-height: 0.5; }
+  line-height: 1; }
 
 .m-coverUnit-subCopy {
-  font-size: 180%; }
+  font-size: 180%;
+  line-height: 1; }
 
 .m-coverUnit-headline {  /* underPage PageTitle */
   font-size: 144%; }
