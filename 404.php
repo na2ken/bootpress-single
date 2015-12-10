@@ -1,5 +1,5 @@
 <?php
-/* Template Name: 404 */
+/* Template Name: 404eror */
 get_header(); ?>
 
 <div class="l-keyVisual wow fadeIn" data-wow-duration="2.5s" data-wow-delay="0s">
