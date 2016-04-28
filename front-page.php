@@ -1,76 +1,93 @@
 <?php
-/* Template Name: front-page */
+/* Template Name: front-page.php */
 get_header(); ?>
-<!-- front-page-temp -->
+<!-- front-page template -->
+<article class="contents">
+<div class="l-cover verticalPadding-t-sm verticalPadding-b-sm">
+    <div class="container">
+        <div class="row">
 
-<div class="l-coverUnit">
-  <div class="l-coverUnit-body">
-      <p class="m-coverUnit-shoulder text-center　txtColor-wht wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="1.5s" style="color: #f6f6f6;">
-        <?php bloginfo('name'); ?>
-      </p>
-      <h1 class="m-coverUnit-copy txtColor-wht wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="2.0s" >WordPress X Bootstrap</h1>
-      <h2 class="m-coverUnit-subCopy txtColor-wht wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="2.5s" >1分で作る応用自在のプロトタイプ！</h2>
-      <div class="row">
-          <div class="m-coverUnit-heroBtn col-sm-offset-4 col-sm-4 col-xs-offset-2 col-xs-8">
-             <a class="btn btn-lg btn-block m-btn-yellow wow fadeInDown" data-wow-duration="2.5s" data-wow-delay="2.5s" href="#" role="button">ダウンロードする</a>
-          </div>
-      </div><!-- /.row -->
-  </div><!-- /.l-coverUnit-body -->
+            <div class="col-sm-12 wow fadeInUp" data-wow-duration="2.5s" data-wow-delay="1.0s">
+<?php
+     global $post;
+     $my_posts= get_posts(array(
+     'post_type' => array('post'),
+     'numberposts' => 1
+     ));
+     foreach($my_posts as $post):setup_postdata($post);
+?>
+    <?php
+    // アイキャッチ画像を配置する
+    if ( has_post_thumbnail() ) :
+        the_post_thumbnail( 'medium img-responsive' );
+        else : ?>
+        <figure>
+            <img src="<?php bloginfo('template_url'); ?>/img/img-noimage.png" alt="<?php the_title(); ?>" class="img-responsive">
+            <!-- アイキャッチ画像がないときに表示させる仮画像  -->
+        </figure>
+    <?php endif; ?>
+<p class="text-center"><small><span class="label label-warning horizontalMargin-r-xs">NEW!</span><?php the_time('Y.m.d'); ?></small></p>
+<h1 class="h1 text-center NotoSansJP-Thin"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+<?php echo mb_substr(strip_tags($post-> post_content),0,95).'...'; ?>             
+<?php endforeach; ?>
 
-  <div class="l-coverUnit-footer text-center">
-          <a href="#firstSection" class="m-scrollDown-icn-round m-scrollDown-icn-round-md is-wht hidden-xs page-scroll txtColor-wht wow pulse fadeInDown" data-wow-delay="3.5s" data-wow-iteration="infinite" data-wow-duration="2000ms">
-              <i class="fa fa-angle-double-down fa-2x"></i>
-          </a>
-  </div>
-</div><!-- /.coverUnit -->
+            </div><!-- /.col-sm-12 -->
 
-<article>
-    <section id="firstSection" class="l-paddingTop-sm l-paddingBottom-sm">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                         <h1 class="m-section-copy text-center">速報！Bootstrap4ついにリリース！</h1>
-                         <h2 class="m-csection-subCopy text-center">Bootstrap4の全貌はこちらで解説</h2>
-                </div>
-          </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.section -->
+        </div><!-- /.row -->
+    </div>
+</div><!-- /.l-cover -->
 
-    <section id="service-info" class="l-paddingTop-sm l-paddingBottom-0 bgColorTone clearfix">
-        <div class="container2">
-            <div class="row2 no-gutter">
-                <div class="col-sm-5">
-                    <img src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/img/fig001.png" class="img-responsive" alt="fig">
-                </div>
-                <div class="col-sm-7">
-                    <div class="m-paddingBox">
-                         <h1 class="m-section-copy">WordPressはあなたにとって必須技術。</h1>
-                         <h2 class="m-section-subCopy">これからのWebデザイナーは、WordPressは絶対できないと困ります。</h2>
-                         <p class="">どれだけかかるかわからない、と思っていませんか？ある方法を使えば、WordPressの完全マスターをわずか6時間でOK。
-                         </p>
-                   </div>
-                </div>
-          </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.section -->
 
-    <section id="service-detail" class="l-paddingTop-sm l-paddingBottom-0 clearfix">
-        <div class="container2">
-            <div class="row2 no-gutter">
-                <div class="col-sm-5 col-sm-push-7">
-                       <img src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/img/fig002.png" class="img-responsive" alt="fig." >
-                </div>
-                <div class="col-sm-7 col-sm-pull-5">
-                    <div class="m-paddingBox">
-                         <h1 class="m-section-copy">Bootstrap3をマスターチャンス！</h1>
-                         <h2 class="m-section-subCopy">もう”カンテツ”は、やめませんか？</h2>
-                         <p class="">CSSフレームワークを使えば、作業時間が半分以上に縮まります。「知りたいけど、学ぶ場所と時間がない！」そんなあなたに耳寄りな情報をご提供します。
-                         </p>
-                   </div>
-                </div>
-          </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.section -->
+<section>
+    <div class="container">
+        <div class="row">
+
+<div class="col-sm-4 verticalMargin-t-sm verticalMargin-b-xs">
+<h2 class="h3 NotoSansJP-Thin">WordPressテーマ関連</h2>
+<?php
+     global $post;
+     $my_posts= get_posts(array(
+     'post_type' => array('wordpress'),
+     'numberposts' => 2
+     ));
+     foreach($my_posts as $post):setup_postdata($post);
+?>
+<h3 class="h2 NotoSansJP-Thin"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+<p><?php echo mb_substr(strip_tags($post-> post_content),0,100).'...'; ?></p>               
+<?php endforeach; ?>
+</div><!-- /.col-sm-4 -->
+
+
+<div class="col-sm-4 verticalMargin-t-sm verticalMargin-b-xs">
+<h2 class="h3 NotoSansJP-Thin">Bootstrapテンプレート関連</h2>
+<?php
+     global $post;
+     $my_posts= get_posts(array(
+     'post_type' => array('bootstrap'),
+     'numberposts' => 2
+     ));
+     foreach($my_posts as $post):setup_postdata($post);
+?>
+<h3 class="h2 NotoSansJP-Thin"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+<p><?php echo mb_substr(strip_tags($post-> post_content),0,100).'...'; ?></p>
+<?php endforeach; ?>
+</div><!-- /.col-sm-4 -->
+
+<div class="col-sm-4 verticalMargin-t-sm verticalMargin-b-xs">
+<h2 class="h3 NotoSansJP-Thin">その他の情報</h2>
+                    <figure>
+                        <img src="http://bootpress.co/wp-content/themes/bootpress-single/img/bnr04-1280x527.png" class="img-responsive" alt="WordPress X Bootstrap Seminar2016 夏本健司 Kenji Natsumoto">
+                    </figure>
+
+<p　class="verticalPadding-t-sm">近日中に「SEO・検索エンジン」のコーナーも開設します！</p>
+</div><!-- /.col-sm-4 -->
+
+        </div><d!-- /.row -->
+    </div>
+</section>
+
+
 </article>
 
-<?php get_footer(); ?>
+<?php 
+get_footer(); ?>

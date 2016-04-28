@@ -1,71 +1,52 @@
+<?php
+/**
+ * BootPress single theme.
+ */
+
+?>
 <!DOCTYPE html>
-<html lang="ja" id="na2ken-150921">
+<html lang="ja" id="pageTop">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="BootPress.co">
+    <?php my_description(); ?>
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="<?php bloginfo( 'description' ); ?>">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-    <title><?php bloginfo( 'name' ); ?><?php wp_title(); ?></title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/bootstrap.min.css">
-
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css">
-
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
-     <!-- WOW -->
-     <link rel="stylesheet" href="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/animate.css">
-
-    <!-- Drawer -->
-    <link rel="stylesheet" href="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/drawer.css">
-
-    <!-- Original CSS -->
-    <link rel="stylesheet" href="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/bps.css">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-39499473-1', 'auto');
-    ga('send', 'pageview');
-
-    </script>
-<?php wp_head(); ?>
+    <link rel="icon" href="<?php bloginfo('url'); ?>/favicon.ico">
+    <link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/img/icon.png">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdn.bootpress.co/assets/css/animate.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bps.css">
+    <title><?php bloginfo('name'); ?></title>
 </head>
-<body <?php body_class(); ?>>
-<header id="header" class="l-header navbar navbar-default navbar-fixed-top" role="banner">
-  <div class="container">
+<body class="page">
+<header id="header" class="navbar navbar-default navbar-fixed-top l-header shadowEffect-1-half" role="banner">
+  <div class="container-liquid page-scroll">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <div class="navbar-header">
-            <a href="<?php echo home_url(); ?>" class="navbar-brand">
-                <img src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/img/bps-vi.png" class="m-vi" height="auto" alt="<?php wp_title(); ?>">
+      <div class="l-vi page-scroll">
+            <a href="<?php bloginfo('url'); ?>" class="vi-a">
+                <img src="<?php bloginfo('template_url'); ?>/img/vi.svg" class="viUnit" height="auto" alt="fronteeer.com">
             </a>
       </div>
 
-      <div class="navbar-collapse collapse">
-         <!-- ul class="nav navbar-nav" -->
-            <?php wp_nav_menu( array( 'theme_location' => 'header-navi', 'items_wrap' => '<ul class="nav navbar-nav">%3$s</ul>' ) ); ?>
-         <!-- /ul -->
+      <div class="navbar-collapse collapse l-globalNav">
+            <div class="l-globalNav-main">
+                <?php wp_nav_menu( array( 'theme_location' => 'header-navi', 'items_wrap' => '<ul class="nav navbar-nav">%3$s</ul>' ) ); ?>
+            </div>
 
-         <ul class="nav navbar-nav navbar-right">
-           <li class="m-specialNav"><a href="./contact/">Talk to Me !</a></li>
-         </ul>
+            <div class="l-globalNav-sub">
+                 <ul class="nav navbar-nav">
+                     <li class="navbarNavUnit-sub">
+                         <a href="<?php bloginfo('url'); ?>/talk-to-me/" class="is-navbarNavUnit-sub-active">お問い合わせ<i class="horizontalMargin-l-sm fa fa-paper-plane-o fa-lg horizontalMargin-l-ss"></i></a></li>
+                 </ul>
+           </div>
     </div><!-- /.navbar-collapse -->
 
   </div><!-- /.container -->
-</header><!-- /.navbar -->
+</header>

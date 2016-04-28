@@ -1,69 +1,107 @@
-<footer class="footer l-footer l-paddingTop-sm l-paddingBottom-sm clearfix">
+<?php
+/**
+ * The template for displaying the footer.
+ *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package UNDERSCORES
+ */
+
+?>
+<footer class="l-footer">
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top page-scroll">
+      <a class="btn" href="#pageTop"><i class="fa fa-chevron-up"></i></a>
+    </div>
        <div class="l-footerAbove">
              <div class="container">
                    <div class="row">
-                         <div class="col-md-4 l-footerCol">
-                              <h3 class="tXtColor-wht">Social link</h3>
-                              <ul class="list-inline">
-                                <li> <a href="https://www.facebook.com/na2ken" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook fa-2x"></i></a> </li>
-                                <li> <a href="https://plus.google.com/u/0/b/102875214712897017331/+Na2ken5150/videos" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus fa-2x"></i></a> </li>
-                                <li> <a href="https://twitter.com/natsuken1" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter fa-2x"></i></a> </li>
-                              </ul>
-                         </div>
-                         <div class="col-md-4 l-footerCol">
-                             <h3 class="tXtColor-wht">Category is....</h3>
-                              <?php
-                             // footer nav Center
-                             wp_nav_menu( array( 'theme_location' => 'footer-center-column' ) ); ?>
-                         </div>
-                         <div class="col-md-4 l-footerCol">
-                           <h3 class="tXtColor-wht">Utilities</h3>
-                           <?php
-                           // footer nav Right
-                           wp_nav_menu( array( 'theme_location' => 'footer-right-column' ) ); ?>
-                         </div>
-                    </div><!-- /.row -->
+                       <div class="col-md-4">
+                           <h3 class="textColor-gryColorTone2nd">Link</h3>
+                           <div class="l-utilityNav-main">
+                               <ul class="navListUnit">
+                                   <li class="utilityNavUnit">
+                                       <a href="<?php bloginfo('url'); ?>/cde/">特定商取引法に基づく表記</a></li>
+                                   <li class="utilityNavUnit">
+                                       <a href="<?php bloginfo('url'); ?>/prv/">プライバシーポリシー</a></li>
+                                   <li class="utilityNavUnit">
+                                       <a href="<?php bloginfo('url'); ?>/imm/">利用規約</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="col-md-4">
+                           <h3 class="textColor-gryColorTone2nd">Category</h3>
+                           <div class="l-utilityNav-main">
+                <?php wp_nav_menu( array( 'theme_location' => 'footer-center-column', 'items_wrap' => '<ul class="navListUnit">%3$s</ul>' ) ); ?>
+                           </div>
+                       </div>
+                       <div class="col-md-4">
+                           <h3 class="textColor-gryColorTone2nd">Search</h3>
+
+<div id="searchBox" class="col-xs-12">
+<div id="searchBox" class="row no-gutter">
+    <div class="col-xs-9">
+<form method="get" id="searchBox" action="<?php echo home_url('/'); ?>" class="">
+            <input placeholder="キーワードを入力" class="form-control" type="text" name="s" id="searchInput" value="<?php the_search_query(); ?>" >
+    </div>
+    <div class="col-xs-3"><input type="submit" value="検索" accesskey="f" class="btn btn-warning"/>
+</form>
+    </div>
+</div>
+</div>
+
+
+                        </div>
+                   </div><!-- /.row -->
               </div><!-- /.container -->
         </div><!-- /.l-footerAbove -->
 
         <div class="l-footeBelow">
               <div class="container">
                       <div class="row">
-                          <small>Copyright &copy; <?php bloginfo( 'name' ); ?></small>
+                          <div class="col-lg-12">
+                                <p class="text-center textColor-gryColorTone2nd verticalPadding-t-0 verticalPadding-b-0">&copy; <span class="small"><?php bloginfo('name'); ?> Allrights Reserved.<span>
+                                </p>
+                          </div>
                       </div><!-- /.row -->
               </div><!-- /.container -->
         </div><!-- /.lay-footeBelow -->
 </footer><!-- /.footer -->
-<?php wp_footer(); ?>
 
-    <!-- Bootstrap js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <!-- WOW -->
-    <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/wow.js"></script>
+<!-- Bootstrap js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/jquery.bootstrap-autohidingnavbar.js"></script>
-    <script src="<?php echo home_url(); ?>/wp-content/themes/bootpress-single/bps.js"></script>
+<!-- WOW -->
+<script src="http://cdn.bootpress.co/assets/js/wow.js"></script>
 
-    <script>
-      wow = new WOW(
-        {
-          animateClass: 'animated',
-          offset:       100,
-          callback:     function(box) {
-            console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-          }
-        }
-      );
-      wow.init();
-      document.getElementById('moar').onclick = function() {
-        var section = document.createElement('section');
-        section.className = 'section--purple wow fadeInDown';
-        this.parentNode.insertBefore(section, this);
-      };
-    </script>
+<script src="http://cdn.bootpress.co/assets/js/jquery.bootstrap-autohidingnavbar.js"></script>
 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<script src="http://cdn.bootpress.co/assets/js/cbpAnimatedHeader.js"></script>
+
+<script src="http://cdn.bootpress.co/assets/js/bps.js"></script>
+
+<script>
+  wow = new WOW(
+    {
+      animateClass: 'animated',
+      offset:       100,
+      callback:     function(box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+      }
+    }
+  );
+  wow.init();
+  document.getElementById('moar').onclick = function() {
+    var section = document.createElement('section');
+    section.className = 'section--purple wow fadeInDown';
+    this.parentNode.insertBefore(section, this);
+  };
 </script>
 </body>
 </html>
