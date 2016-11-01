@@ -14,3 +14,7 @@ This template is the original source for creating single page (one page) in Word
 ## Author
 
 [na2ken](http://na2ken.com)
+
+### Demo
+
+[demo site here](http://bp-single.iaowd.com/)
